@@ -1,0 +1,41 @@
+{
+  "name": "sock-management-portal",
+  "version": "1.0.0",
+  "description": "Sock Management Portal - Lot & Godown wise inventory (React + Electron)",
+  "main": "main.js",
+  "author": "Delivered by ChatGPT",
+  "license": "MIT",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "electron-start": "electron .",
+    "dist": "electron-builder --win --x64"
+  },
+  "build": {
+    "appId": "com.example.sockmanagement",
+    "productName": "Sock Management Portal",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "build/**/*",
+      "main.js",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    }
+  },
+  "devDependencies": {
+    "electron": "^25.0.0",
+    "electron-builder": "^24.6.0",
+    "react-scripts": "5.0.1"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
